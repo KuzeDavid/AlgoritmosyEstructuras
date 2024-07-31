@@ -1,0 +1,181 @@
+// BIBLIOTECAS / // 
+#include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
+#include <string.h>
+ 
+// / MACROS / //
+#define P printf
+#define S scanf
+ 
+//Funciones
+void titulo() // El titulo que se muestra junto a las instrucciones
+{
+	P("/ / / / / / / / / // / / / / / / / / / / / // / / \n");
+	P("/   Bienvenido al proyecto de medio semestre   / \n");
+	P("/       R U L E T A   A M E R I C A N A         / \n");
+	P("******************\n");
+	P("                           \n");
+	P("***   *      *  *      ** *** *** \n");
+	P("*     *   *      *  *      *         *    *     * \n");
+	P("***   *      *  *      *         *    *     * \n");
+	P("*   *     *      *  *      **      *    * * * * \n");
+	P("*    *    *      *  *      *         *    *     * \n");
+	P("*     *    **   ** **    *    *     *   ");
+	P("                           \n");
+	P("******************\n");
+	P("/ / / / / / / / / / / / / / / / / / / / / / / / / \n");
+	P("/ / / / / / I N S  T R U C I O N E S / / /  / / / \n");
+	P("/\n");
+	P("        Vamos a probar suerte tu suerte! \n");
+	P("/\n");
+	P("  -EN ESTA RULETA PUEDES APOSTAR POR UN NUMERO\n");
+	P("  Y EL COLOR DE ESE NUMERO \n");
+	P("  -SELECIONA CON CUIDADO TU APUESTA YA QUE SI \n");
+	P("  COMBINAS UN NUMERO CON UN UN COLOR DIFERENTE\n");
+	P("  MARCARA ERROR.\n");
+	P("  -PRIMERO INGRESA EL NUMERO AL QUE DESEAS APOSTAR\n");
+	P("  ACTO SEGUIDO UN COLOR (SEPARADOS POR COMA) \n");
+	P("******************\n");
+	P("/ / / / / / / / / / / / / / / / / / / / / / / / / \n");
+	P(" Te sientes con suerte? \n");
+	P(" Esta es la Tabla de ruleta \n");
+	P(" \n");
+	P(" Recuerda que V= VERDE  N=NEGRO Y R=ROJO\n");
+	P("[00-V][3-N][6-R][9-N][12-R][15-N][18-R][21-N][24-R][27-N][30-R][33-N][36-R]\n");
+	P("      [2-R][5-N][8-R][11-N][14-R][17-N][20-R][23-N][26-R][29-N][32-R][35-N]\n");
+	P("[0 -V][1-N][4-R][7-N][10-R][13-N][16-R][19-N][22-R][25-N][28-R][31-N][34-R]\n");
+	P(" \n");
+} //titulo
+ 
+int APUESTA(Apuesta) //FUNCION APUESTA
+{
+	P(" Ingresa el numero al que apuestas: ");
+S("%i", &i);
+	for(int i=0;i<38;i++)
+		{
+			 for(int j=0;j<2;j++)
+				{
+					 if (RULETA[i][j]==RULETA[38][2])
+					 P("muy bien");
+				}
+        }
+ 
+	/*
+
+
+
+		{   //si la condicion anterior es verdadera imprime "Tu numero no es valido
+			P("El numero que ingresaste no es correcto, prueba otra vez\n");
+			S("%i", &numero);
+		}
+		else if (numero < 39 || numero > 0)
+		{
+			P(" Ingresa el color al que apuestas: \n");
+			P(" 1=NEGRO  2=ROJO  3=VERDE ");
+			S("%i", &color);
+			if (color != 1, 2, 3)
+			{
+				P("Upss! ese no es un color valido \n");
+				P("Intenta nuevamente Usando [3]=Verde [2]=rojo o [1]=Negro \n");
+				S("%i", &color);
+
+				if (???????) {
+				P("A girar la ruleta!");
+				girar(numganador);
+			}
+			}
+		}
+
+
+		} while (&numero,&color == RULETA[38][2]); */
+ 
+ 
+		return APUESTA;
+	} //apuesta //funcion para apostar
+ 
+int girar() //FUNCION PARA GIRAR ruleta
+{
+    int numganador; //aleatorio
+    int hora = time(NULL); //
+    srand(hora); //de esta forma siempre cambiara numero aleatorio
+    numganador=rand()%38
+    P("\n \n")
+    return numganador;
+}
+ //Main
+ int main()
+	{
+	int Apuesta;
+	int numero;
+	int color;
+	int RULETA[38][2] = { //3=verde 1=negro 2=rojo//
+						 {00,3},
+						 {0,3},
+						 {1,1},
+						 {2,2},
+						 {3,1},
+						 {4,2},
+						 {5,1},
+						 {6,2},
+						 {7,1},
+						 {8,2},
+						 {9,1},
+						 {10,2},
+						 {11,1},
+						 {12,2},
+						 {13,1},
+						 {14,2},
+						 {15,1},
+						 {16,2},
+						 {17,1},
+						 {18,2},
+						 {19,1},
+						 {20,2},
+						 {21,1},
+						 {22,2},
+						 {23,1},
+						 {24,2},
+						 {25,1},
+						 {26,2},
+						 {27,1},
+						 {28,2},
+						 {29,1},
+						 {30,2},
+						 {31,1},
+						 {32,2},
+						 {33,1},
+						 {34,2},
+						 {35,1},
+						 {36,2} };
+		int i,j;
+ 
+ 
+ 
+	    //llamar funciones//
+		titulo();
+		Apuesta = APUESTA(Apuesta);
+ 
+ 
+ 
+	////////////idea para imprimir ganador o perdedor /////////////	
+    P("El la bola cayo en  %i,%c, numganador, color");
+    if (&apuesta == numganador)
+	P("******************\n");
+	P("*    F E L I C I D A D E S  H A Z  G A N A D O   *\n");
+	P("******************\n");
+	P("*\n");
+	P("Deseas volver a jugar? SI=1 NO= 2\n");
+	S("%d, &s_n \n")
+	jugar++
+ 
+    else if (numganador != &apuesta)
+	P("******************\n");
+	P("*      L A S T I M A   H A Z   P E R D I D O     *\n");
+	P("******************\n");
+	P("*\n");
+	P("Deseas volver a jugar? SI=1 NO= 2\n");
+	S("%d, &s_n \n")
+ 
+ 
+	}
